@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title></title>
+    </head>
+    <body>
+        <h3>form属性</h3>
+        <hr />
+        <form action="#" method="get" id="user_form">
+            Name:<input type="text" name="user_name" autofocus="autofocus" /><br />
+        <input type="submit" value="提交" />
+        </form>
+        <p>
+           下面的输入域在 form 元素之外仍然是表单的一部分，
+           也就是说提交也会把 lastname提交。
+        </p>
+            Lastname:<input type="text" name="lastname" form="user_form" />
+
+        <h3>multiple属性</h3>
+        <hr />
+        <form action="#" method="get" id="user_file">
+        选择文件：<input type="file" name="file" multiple="multiple"form="user_file" />
+        <input type="submit" value="提交" />
+        </form>
+
+        <h3>pattern属性</h3>
+        <hr />
+        <form action="#" method="get">
+            Name:
+            <input type="text" name="name" pattern="[A-z]{4}" title="请输入四个字母" />
+            <input type="submit" value="提交" />
+        </form>
+
+        <h3>placeholder 属性 </h3>
+        <hr />
+        <form action="#" method="get">
+            <input type="search" name="user_search" placeholder="实验楼" />
+            <input type="submit" value="提交" />
+        </form>
+
+        <h3>required 属性</h3>
+        <hr />
+        <form action="#" method="get">
+            <input type="search" name="user_search" required="required" />
+            <input type="submit" value="提交" />
+        </form>
+
+
+    </body>
+</html>
