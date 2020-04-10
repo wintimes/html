@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+        <h3>填充</h3>
+        <hr />
+        <!-- ctx.fillStyle = color | gradient | pattern; -->
+        <canvas id="myCanvas" width="520px" height="200px">
+        </canvas>
+        <script type="text/javascript">
+        var myCanvas = document.getElementById("myCanvas");
+        var ctx = myCanvas.getContext("2d");
+        ctx.fillStyle = "red";
+        ctx.fillRect(10, 10, 100, 200);
+        </script>
+        <h3>渐变</h3>
+        <hr />
+        <!-- ctx.createLinearGradient(x0, y0, x1, y1); -->
+        <canvas id="myCanvas1" width="520px" height="220px">
+        </canvas>
+        <script type="text/javascript">
+            var myCanvas = document.getElementById("myCanvas1");
+            var ctx = myCanvas.getContext("2d");
+            var gradient = ctx.createLinearGradient(0, 0, 170, 0);
+            gradient.addColorStop(0, "red");
+            gradient.addColorStop("0.2","orange");
+            gradient.addColorStop("0.5","yellow");
+            gradient.addColorStop("0.7","green");
+            gradient.addColorStop(1,"blue");
+            ctx.fillStyle = gradient;
+            ctx.fillRect(10, 10, 100, 200);
+        </script>
+        <h3>渐变圆圈</h3>
+        <hr />
+        <!-- ctx.createRadialGradient(x0, y0, r0, x1, y1, r1); -->
+        <canvas id="myCanvas2" width="520px" height="200px">
+        </canvas>
+        <script type="text/javascript">
+            var myCanvas = document.getElementById("myCanvas2");
+            var ctx = myCanvas.getContext("2d");
+            var gradient = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+            gradient.addColorStop(0,"red");
+            gradient.addColorStop("0.2","orange");
+            gradient.addColorStop("0.5","yellow");
+            gradient.addColorStop("0.7","green");
+            gradient.addColorStop(1,"blue");
+            ctx.fillStyle = gradient;
+            ctx.fillRect(10, 10, 190, 150);
+        </script>
+        <h3>填充 </h3>
+        <hr />
+        <canvas id="myCanvas3" width="520px" height="300px">
+        </canvas>
+        <script type="text/javascript">
+            var myCanvas = document.getElementById("myCanvas3");
+            var ctx = myCanvas.getContext("2d");
+            ctx.rect(20, 20, 150,100);
+            ctx.fillStyle = "red";
+            ctx.fill();
+        </script>
+    </body>
+</html>

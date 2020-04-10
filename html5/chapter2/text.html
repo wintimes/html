@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <!-- ctx.fillText(text, x, y, maxWidth); -->
+        <h3>fillText</h3>
+        <hr />
+        <canvas id="myCanvas2" width="520px" height="200px">
+        </canvas>
+            <script type="text/javascript">
+                var myCanvas = document.getElementById("myCanvas2");
+                var ctx = myCanvas.getContext("2d");
+                ctx.fillText("Hello Syl!", 10, 50);
+            </script>
+        <h3>strokeText()</h3>
+        <hr />
+        <canvas id="myCanvas1" width="520px" height="300px">
+        </canvas>
+        <script type="text/javascript">
+        var myCanvas = document.getElementById("myCanvas1");
+        var ctx = myCanvas.getContext("2d");
+        ctx.font = "50px Georgia";
+        ctx.strokeText("Hello Syl!", 10, 50);
+        </script>
+        <h3>textalign</h3>
+        <hr />
+        <!-- ctx.textAlign = "center|end|left|right|start"; -->
+        <canvas id="myCanvas3" width="520px" height="500px">
+        </canvas>
+        <script type="text/javascript">
+        var myCanvas = document.getElementById("myCanvas3");
+        var ctx = myCanvas.getContext("2d");
+        ctx.strokeStyle = "red";
+        ctx.moveTo(200, 20);
+        ctx.lineTo(200, 100);
+        ctx.stroke();
+        ctx.font = "20px Georgia";
+        ctx.textAlign = "start";
+        ctx.strokeText("Hello Syl!", 200, 20);
+        ctx.textAlign = "center";
+        ctx.strokeText("Hello Syl!", 200, 60);
+        ctx.textAlign = "end";
+        ctx.strokeText("Hello Syl!", 200, 100);
+        ctx.textAlign = "left";
+        ctx.strokeText("Hello Syl!", 200, 140);
+        ctx.textAlign = "right";
+        ctx.strokeText("Hello Syl!", 200, 180);
+        </script>
+        <h3>baseline</h3>
+        <hr />
+        <!-- ctx.textBaseline = "alphabetic|top|hanging|middle|ideographic|bottom"; -->
+        <canvas id="myCanvas6" width="1314px" height="1314px">
+        </canvas>
+        <script type="text/javascript">
+        var myCanvas = document.getElementById("myCanvas6");
+        var ctx = myCanvas.getContext("2d");
+        ctx.strokeStyle = "blue";
+        ctx.moveTo(20, 100);
+        ctx.lineTo(1314, 100);
+        ctx.stroke();
+        ctx.font = "30px Georgia";
+        ctx.textBaseline = "alphabetic";
+        ctx.fillText("Hello Syl!", 20, 100);
+        ctx.textBaseline ="top";
+        ctx.fillText("Hello Syl!", 220, 100);
+        ctx.textBaseline = "hanging";
+        ctx.fillText("Hello Syl!", 420, 100);
+        ctx.textBaseline = "middle";
+        ctx.fillText("Hello Syl!", 620, 100);
+        ctx.textBaseline = "ideographic";
+        ctx.fillText("Hello Syl!", 820, 100);
+        ctx.textBaseline = "bottom";
+        ctx.fillText("Hello Syl!", 1020,100);
+        </script>
+    </body>
+</html>

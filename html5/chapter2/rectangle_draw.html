@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+        <h3>rect()使用方法</h3>
+        <hr />
+        <canvas id="myCanvas" width="520px" height="220px">
+        </canvas>
+        <script type="text/javascript">
+        var myCanvas = document.getElementById("myCanvas");
+        var ctx = myCanvas.getContext("2d");
+        ctx.rect(10, 10, 100, 200);
+        ctx.stroke();
+        </script>
+        <h3>strokeRect()使用方法</h3>
+        <hr />
+        <canvas id="myCanvas1" width="520px" height="220px">
+        </canvas>
+        <script type="text/javascript">
+        var myCanvas = document.getElementById("myCanvas1");
+        var ctx = myCanvas.getContext("2d");
+        ctx.strokeRect(10, 10, 100, 200);
+        </script>
+        <h3>fillRect()使用方法</h3>
+        <hr />
+        <canvas id="myCanvas2" width="520px" height="220px">
+        </canvas>
+        <script type="text/javascript">
+        var myCanvas = document.getElementById("myCanvas2");
+        var ctx = myCanvas.getContext("2d");
+        ctx.fillRect(10, 10, 100, 200);
+        </script>
+        <h3>clearRect()使用方法</h3>
+        <hr />
+        <canvas id="myCanvas3" width="520px" height="220px">
+        </canvas>
+        <script type="text/javascript">
+        var myCanvas = document.getElementById("myCanvas3");
+        var ctx = myCanvas.getContext("2d");
+        ctx.fillRect(10, 10, 100, 200);
+        ctx.clearRect(20, 20, 50, 50);
+        </script>
+    </body>
+</htmlvovo

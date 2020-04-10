@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+       <h3>依次定位5张照片</h3>
+       <hr />
+       <canvas id="myCanvas2" width="110px" height="500px">
+       </canvas>
+       <script type="text/javascript">
+       var myCanvas = document.getElementById("myCanvas2");
+       var ctx = myCanvas.getContext("2d");
+       var image2 = new Image();
+       image2.src = "a.png";
+       image2.onload = function(){
+           for (var i = 0; i < 5; i++){
+               ctx.drawImage(image2, 1 + i * 8, 1 + i * 8);
+           }
+       };
+       </script>
+       <h3>定位图像，规定图像高度宽度</h3>
+       <hr />
+       <canvas id="myCanvas1" width="1314px" height="1314px">
+       </canvas>
+       <script type="text/javascript">
+       var myCanvas = document.getElementById("myCanvas1");
+       var ctx = myCanvas.getContext("2d");
+       var image1 = new Image();
+       image1.src = "a.png";
+       image1.onload = function(){
+           ctx.drawImage(image1, 100, 100, 150, 150);
+       };
+       </script>
+        <!-- 基本语法：
+        //创建一个图片对象
+        var image = new Image();
+        //设置图片的路径
+        image.src = "xxx";
+        //当图片加载完成后
+        image.onload = function() {
+        //绘制图片
+        ctx.drawImage();
+        }; -->
+       <!-- 定位图像：ctx.drawImage(img, x, y); -->
+       <!-- 定位图像并规定高度宽度：ctx.drawImage(img, x, y, width, height); -->
+       <!-- 剪切图像：ctx.drawImage(img, sx, sy, swidth, sheight, x, y, width, height); -->
+    </body>
+</html>

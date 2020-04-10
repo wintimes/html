@@ -1,0 +1,16 @@
+    <h3>依次定位5张照片</h3>
+       <hr />
+       <canvas id="myCanvas2" width="1000px" height="500px">
+       </canvas>
+       <script type="text/javascript">
+       var myCanvas = document.getElementById("myCanvas2");
+       var ctx = myCanvas.getContext("2d");
+       var image2 = new Image();
+       image2.src = "a.png";
+       image2.onload = function(){
+           for (var i = 0; i < 5; i++){
+               ctx.drawImage(image2, 1 + i * 8, 1 + i * 8);
+           }
+       };
+       </script>
+       

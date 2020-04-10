@@ -1,0 +1,13 @@
+ <h3>定位图像，规定图像高度宽度</h3>
+       <hr />
+       <canvas id="myCanvas1" width="1314px" height="1314px">
+       </canvas>
+       <script type="text/javascript">
+       var myCanvas = document.getElementById("myCanvas1");
+       var ctx = myCanvas.getContext("2d");
+       var image1 = new Image();
+       image1.src = "a.png";
+       image1.onload = function(){
+           ctx.drawImage(image1, 100, 100, 150, 150);
+       };
+       </script>
