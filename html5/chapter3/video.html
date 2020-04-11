@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+        <h3>供不支持video元素的浏览器显示</h3>
+        <hr  />
+
+        <video width="320" height="240" controls="controls">
+            <source
+                src="http://labfile.oss.aliyuncs.com/courses/1248/video.ogg"
+                type="video/ogg"
+            />
+            <source
+                src="http://labfile.oss.aliyuncs.com/courses/1248/video.mp4"
+                type="video/mp4"
+            />
+        </video>
+            <h3>实例</h3>
+            <hr />
+        <video
+            src="http://labfile.oss.aliyuncs.com/courses/1248/video.ogg"
+            width="320"
+            height="240"
+            controls="controls"
+            autoplay="autoplay"
+            >
+        </video>
+        <h3>字幕功能</h3>
+        <hr />
+        <video
+            src="http://labfile.oss.aliyuncs.com/courses/1248/video.ogg"
+            width="320"
+            height="240"
+            controls="controls"
+            >
+        <track
+            src="video_ch.vtt"
+            srclang="zh"
+            kind="subtitiles"
+            label="中文"
+        />
+        <track src="video_en.vtt" srclang="en" kind="subtitles" label="English" />
+        </video>
+    </body>
+</html>
