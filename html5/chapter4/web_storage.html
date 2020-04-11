@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+        <h1> 简单web留言板 </h1>
+        <textarea id="memo" cols="60" rows="6">
+        </textarea><br />
+        <input type="button" value="新增留言" onclick="saveStorage('memo');" />
+        <input type="button" value="清空数据" onclick="clearStorage();"/>
+        <input
+            type="button"
+            value="清空最后一个数据"
+            onclick="clearsingleStorage();"
+        />
+        <hr />
+        <p id="msg"></p>
+        <script type="text/javascript">
+            function saveStorage(id) {
+                var data = document.getElementById(id).value;
+                var time = new Data()
+            }
+    </body>
+</html>
